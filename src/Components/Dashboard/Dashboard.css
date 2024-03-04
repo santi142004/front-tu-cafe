@@ -1,0 +1,23 @@
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .dashboard-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-section p {
+    margin-bottom: 5px;
+  }
+  
