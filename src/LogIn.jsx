@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = formData;
     try {
-      const response = await fetch('https://54.88.1.52/tuCafe/v1/client/login', {
+      const response = await fetch('http://localhost:8080/tuCafe/v1/client/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
