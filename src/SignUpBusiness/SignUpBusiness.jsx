@@ -13,7 +13,7 @@ const SignUpBusiness = () => {
   useEffect(() => {
     if (formData.registered) {
       setTimeout(() => {
-        window.location.href = '/loginBusiness';
+        window.location.href = '/';
       }, 2000); // Redirigir después de 2 segundos
     }
   }, [formData.registered]);
