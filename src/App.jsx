@@ -80,7 +80,7 @@ function App() {
           <Route path="/cafes/Deltorocafe" element={<Deltorocafe />} />
           <Route path="/cafes/GardenCafe" element={<GardenCafe />} />
           <Route path="/cafes/LaCabraLoca" element={<LaCabraLoca />} />
-          <Route path="/Perfil" element={<Perfil />} />
+          <Route path="/perfil" element={<Perfil />} />
           <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
           <Route path="/SignUpBusiness" element={<SignUpBusiness />} />
           <Route path="/loginBusiness" element={<BusinessLogin />} />
