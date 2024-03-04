@@ -32,7 +32,7 @@ const SignUp = () => {
     e.preventDefault();
     const { email, name, password } = formData;
     try {
-      const response = await fetch('http://3.94.116.249/tuCafe/v1/client/register', {
+      const response = await fetch('https://3.94.116.249/tuCafe/v1/client/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

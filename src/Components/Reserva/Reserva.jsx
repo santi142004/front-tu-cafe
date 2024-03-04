@@ -11,7 +11,7 @@ function Book() {
   const [businesses, setBusinesses] = useState([]);
 
   useEffect(() => {
-    fetch('http://3.94.116.249/tuCafe/v1//listBusiness')
+    fetch('https://3.94.116.249/tuCafe/v1//listBusiness')
       .then(response => response.json())
       .then(data => setBusinesses(data))
       .catch(error => console.error('Error al obtener la lista de negocios:', error));
@@ -28,7 +28,7 @@ function Book() {
     const errors = validateForm(formData);
     if (Object.keys(errors).length === 0) {
       try {
-        const response = await fetch('http://3.94.116.249/tuCafe/v1/reservation/creation_reservation', {
+        const response = await fetch('https://3.94.116.249/tuCafe/v1/reservation/creation_reservation', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

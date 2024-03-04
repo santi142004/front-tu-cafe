@@ -30,7 +30,7 @@ const SignUpBusiness = () => {
     e.preventDefault();
     const { email, name, password } = formData;
     try {
-      const response = await fetch('http://3.94.116.249/tuCafe/v1/business/register', {
+      const response = await fetch('https://3.94.116.249/tuCafe/v1/business/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
