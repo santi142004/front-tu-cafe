@@ -35,10 +35,22 @@ function Book() {
           },
           body: JSON.stringify(formData)
         });
+  
         if (response.ok) {
           console.log('Datos enviados con éxito');
+          Swal.fire({
+            icon: "success",
+            title: "¡Reserva exitosa!",
+            showConfirmButton: false,
+            timer: 3000
+          });
         } else {
           console.error('Error al enviar datos');
+          Swal.fire({
+            icon: "error",
+            title: "Inicio de sesión fallido.",
+            text: "Verifica tus credenciales."
+          });
         }
       } catch (error) {
         console.error('Error al enviar datos:', error);
