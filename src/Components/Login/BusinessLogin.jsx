@@ -21,7 +21,7 @@ const BusinessLogin = () => {
     e.preventDefault();
     const { email, password } = formData;
     try {
-      const response = await fetch('http://localhost:8080/tuCafe/v1/business/login', {
+      const response = await fetch('http://3.94.116.249/tuCafe/v1/business/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
