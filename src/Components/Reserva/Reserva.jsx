@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 function Book() {
   const [formData, setFormData] = useState({
+    email: '',
     name: '',
     date: '',
     description: ''
@@ -94,6 +95,15 @@ function Book() {
               className="box"
             /> */}
         </div>
+        <input
+  type="email"
+  name="email"
+  value={formData.email}
+  onChange={handleChange}
+  className="box"
+  placeholder="Escribe tu correo electronico"
+/>
+
         <input
   type="text"
   name="name"
