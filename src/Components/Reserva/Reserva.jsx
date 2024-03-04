@@ -42,14 +42,14 @@ function Book() {
             icon: "success",
             title: "¡Reserva exitosa!",
             showConfirmButton: false,
-            timer: 3000
+            timer: 2000
           });
         } else {
           console.error('Error al enviar datos');
           Swal.fire({
             icon: "error",
-            title: "Inicio de sesión fallido.",
-            text: "Verifica tus credenciales."
+            title: "Reserva invalida",
+            text: "Por favor ingresa de nuevo los datos"
           });
         }
       } catch (error) {
