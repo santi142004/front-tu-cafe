@@ -43,7 +43,7 @@ const Login = () => {
         setFormData({ ...formData, registered: true });
         const token = await response.json()
         localStorage.setItem("token", token.token);
-        window.location.href = "/"
+        window.location.href = "/perfil"
       } else {
         Swal.fire({
           icon: "error",
