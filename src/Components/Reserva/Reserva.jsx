@@ -2,17 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 function Book() {
   const [formData, setFormData] = useState({
-    id_client: '',
-    id_business: '',
-    description: '',
-    date: ''
+    name: '',
+    date: '',
+    description: ''
   });
   const [formErrors, setFormErrors] = useState({});
 
   const [businesses, setBusinesses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/tuCafe/v1/businesses')
+    fetch('http://localhost:8080/tuCafe/v1//listBusiness')
       .then(response => response.json())
       .then(data => setBusinesses(data))
       .catch(error => console.error('Error al obtener la lista de negocios:', error));
@@ -52,11 +51,8 @@ function Book() {
   // Función para validar el formulario
   const validateForm = (data) => {
     let errors = {};
-    if (!data.id_client.trim()) {
-      errors.id_client = 'El ID del cliente es obligatorio';
-    }
-    if (!data.id_business.trim()) {
-      errors.id_business = 'El ID del negocio es obligatorio';
+    if (!data.name.trim()) {
+      errors.name = 'El ID del negocio es obligatorio';
     }
     if (!data.date.trim()) {
       errors.date = 'La fecha es obligatoria';
@@ -86,20 +82,17 @@ function Book() {
               className="box"
             /> */}
         </div>
-        <select
-          name="id_business"
-          value={formData.id_business}
-          onChange={handleChange}
-          className="box"
-        >
-          <option value="">Selecciona un negocio</option>
-          {businesses.map(business => (
-            <option key={business.id} value={business.id}>{business.name}</option>
-          ))}
-        </select>
-        {formErrors.id_business && <p className="error">{formErrors.id_business}</p>}
-       
-        {formErrors.id_client && <p className="error">{formErrors.id_client}</p>}
+        <input
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  className="box"
+  placeholder="Escribe el nombre del negocio"
+/>
+
+        {formErrors.name && <p className="error">{formErrors.name}</p>}
+
         <textarea
           name="description"
           value={formData.description}
