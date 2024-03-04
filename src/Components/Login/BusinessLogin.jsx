@@ -41,7 +41,7 @@ const BusinessLogin = () => {
         setFormData({ ...formData, registered: true });
         const token = await response.json()
         localStorage.setItem("token", token.token);
-        window.location.href = "/perfilbusiness"
+        window.location.href = "/"
       } else {
         Swal.fire({
           icon: "error",
